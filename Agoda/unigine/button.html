@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presenter/Listener</title>
+    
+
+    <style>
+body{
+    background-image: url(./assets/images/body-bg.png);
+}
+
+
+        .tester{
+    font-size: 15px;
+    animation: slideMe 1s ease-in;
+}
+
+.tester2{
+    font-size: 15px;
+    animation: slideMeOut 1s ease-in;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 1s linear; 
+}
+
+
+
+
+
+
+@keyframes slideMe{
+  0%{
+    transform: skewX(53deg) translateX(500px);
+  }
+  100%{
+    transform: skew(0deg);
+  }
+}
+
+@keyframes slideMeOut{
+  0%{
+    transform: skewX(-53deg) translateX(-500px);
+  }
+  100%{
+    transform: skew(0deg);
+  }
+}
+
+
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block!important;
+}
+
+.ta-r{
+  text-align: right;
+}
+
+.ta-c{
+  text-align: center;
+}
+
+.padT150{
+  padding-top: 300px;
+}
+
+.padB150{
+  padding-bottom:150px;
+}
+
+.button {
+  width: 340px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+  
+  .button.cancel-btn:hover {
+  background-color: #F3270B;
+  box-shadow: 0px 15px 20px rgba(243, 42, 11, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button.accept-btn:hover {
+  background-color: #0B91F3;
+  box-shadow: 0px 15px 20px rgba(11, 113, 243, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+
+    </style>
+</head>
+<body>
+
+        
+        <div class="ta-c padT150 padB150">
+        <a href="https://forms.gle/CJpnuoUo7UTjLyxW9"> <button class="button cancel-btn"  onclick="addAnimation()">
+        Presenter
+        </button></a>
+        <a href="https://forms.gle/fpUH9Fvffofyyo1f7"><button class="button accept-btn"  onclick="addAnimation2()">
+        Listener
+        </button></a>
+        </div>
+        
+</body>
+</html>
